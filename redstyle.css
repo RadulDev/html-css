@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-snap {
+    height: 30vh;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    /* padding-bottom: 1rem; */
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    gap: 1rem;
+
+    & > a {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    }
+
+    & img {
+        /* width: 100vw; */
+        /* height: 200px; */
+        object-fit: contain;
+    }
+  }
+
+section > picture {
+    scroll-snap-align: start;
+  }
+
+.main{
+    display: grid;
+    grid-template-columns: minmax(150px, 25%) 1fr;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+}
+/* .sidebar, .contentbar{
+    flex: 1 1 300px;
+    background-color: gray;
+} */
+
+.sidebar{
+    display: grid;
+    place-items: center;
+    background-color:peru;
+
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    text-transform: capitalize;
+    list-style: none;
+}
+
+.sidebar ul li{
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-content: space-; */
+    padding: 30px;
+    
+}
+
+.contentbar h3{
+    padding: 1rem;
+    text-transform: uppercase;
+    /* font: large; */
+    font-size: 1.5rem;
+    text-decoration-line: underline;
+}
+
+li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
